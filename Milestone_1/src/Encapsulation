@@ -1,0 +1,67 @@
+package Encapsulation;
+class Author
+{
+	public static String name;
+	public static String email;
+	public static char gender;
+ Author(String n,String e,char g)
+	    {
+	        name=n;
+	        email=e;
+	        gender=g;
+	    }
+}
+class Book
+{
+	String name1,author;
+	double price;
+	int qtyInStock;
+	Book(String n)
+	{
+      name1=n;
+	}
+	public String getname()
+	{
+		return name1;
+	}
+	public void setprice()
+	{
+		price=200;
+	}
+	public double getprice()
+	{
+		return price;
+	}
+	public void setqtyinstock()
+	{
+		qtyInStock=50;
+	}
+	public int getqtyinstock()
+	{
+		return qtyInStock;
+	}
+		 public void getAuthor()
+		  {
+		       System.out.println("The name of the author is :"+Author.name);
+		       System.out.println("The email id is :"+Author.email);
+		       System.out.println("The gender is :"+Author.gender);
+		    }
+	}
+	
+
+
+public class BookandAuthor {
+
+	public static void main(String[] args) {
+		Book b=new Book("Wonders of the World");
+		Author a=new Author("sreenu","sreenu123@gmail.com",'m');
+         b.setprice();
+         b.setqtyinstock();
+         System.out.println("The name of the book is :"+b.getname());
+         System.out.println("The price of the book is :"+b.getprice());
+         System.out.println("The stock is :"+b.getqtyinstock());
+         
+         b.getAuthor();
+	}
+
+}
